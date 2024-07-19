@@ -1,22 +1,22 @@
 {
   "development": {
-    "username": "your_username",
+    "username": "localhost",
     "password": "22Two3",
-    "database": "mentor_mentee_app",
+    "database": "mirrorgap_clonedb",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
-    "username": "your_username",
+    "username": "localhost",
     "password": "22Two3",
-    "database": "mentor_mentee_app_test",
+    "database": "mirrorgap_clonedb",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
-    "username": "your_username",
+    "username": "localhost",
     "password": "22Two3",
-    "database": "mentor_mentee_app_prod",
+    "database": "mirrorgap_clonedb",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }

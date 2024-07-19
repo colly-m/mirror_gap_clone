@@ -1,5 +1,5 @@
-// src/pages/HomePage.js
 import React from 'react';
+import Header from '../components/Header';
 
 const HomePage = () => {
   return (
