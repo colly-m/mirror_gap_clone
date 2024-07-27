@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mentor-Mentee Social Media App</title>
+    <title>Mirror-Gap_Clone App</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -17,9 +17,9 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Connect with Your Mentor or Mentee</h1>
-            <p>Find your perfect match and start growing together!</p>
-            <button class="btn btn-primary">Get Started</button>
+            <h1>Link with Pros and Newbees</h1>
+            <p>Find your Clicker and start growing together!</p>
+            <a href="/src/pages/SignupPage" class="btn btn-primary">Get Started</a>
         </div>
         <img src="hero-image.jpg" alt="Hero Image">
     </section>
@@ -49,7 +49,7 @@
     <section class="cta">
         <h2>Ready to Get Started?</h2>
         <p>Sign up now and start connecting with your mentor or mentee!</p>
-        <button class="btn btn-primary">Sign Up</button>
+        <a href="/src/pages/SignupPage" class="btn btn-primary">Sign Up</a>
     </section>
 
     <!-- Testimonials or Social Proof Section (Optional) -->
@@ -69,15 +69,21 @@
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 Mirror Gap Clone</p>
         <ul class="social-media-links">
             <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
             <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
             <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
             <li><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
         </ul>
+        <p>&copy; 2024 Mirror-Gap Clone</p>
     </footer>
-
-    <script src="App.js"></script>
+    <script>
+        document.getElementById('get-started-btn').addEventListener('click', function() {
+            window.location.href = '/signup';
+        });
+        document.getElementById('sign-up-btn').addEventListener('click', function() {
+            window.location.href = '/signup';
+        });
+    </script>
 </body>
 </html>

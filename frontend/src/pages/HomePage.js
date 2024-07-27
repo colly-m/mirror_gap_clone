@@ -1,11 +1,19 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 
 const HomePage = () => {
+  const navigate = useNavigate();
+
   return (
     <div>
-      <h1>Welcome to the Mirror-Gap</h1>
+      <Header />
+      <h1>Welcome to Mirror-Gap Clone</h1>
       <p>Connect with Pros and grow your skills!</p>
+      <div>
+        <button onClick={() => navigate('/signup')}>Get Started</button>
+        <button onClick={() => navigate('/login')}>Login</button>
+      </div>
     </div>
   );
 };

@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/mirror-gap_clone/static/css/main.e4440239.css",
+    "main.js": "/mirror-gap_clone/static/js/main.8db51386.js",
+    "static/media/redux.cjs": "/mirror-gap_clone/static/media/redux.7edfc461ab353f1712ab.cjs",
+    "index.html": "/mirror-gap_clone/index.html",
+    "main.e4440239.css.map": "/mirror-gap_clone/static/css/main.e4440239.css.map",
+    "main.8db51386.js.map": "/mirror-gap_clone/static/js/main.8db51386.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e4440239.css",
+    "static/js/main.8db51386.js"
+  ]
+}

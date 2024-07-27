@@ -1,6 +1,6 @@
-// src/App.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import HomePage from './pages/HomePage';
 import SignupPage from './pages/SignupPage';
 import LoginPage from './pages/LoginPage';
@@ -11,19 +11,28 @@ import MentorList from './components/MentorList';
 import MenteeList from './components/MenteeList';
 import './App.css';
 
+
+const PrivateRoute = ({ component: Component, ...rest }) => {
+  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+  return isAuthenticated ? <Component {...rest} /> : <Navigate to="/login" />;
+};
+
+
 function App() {
   return (
     <Router>
       <div>
-        <Switch>
-          <Route path="/" exact component={HomePage} />
-          <Route path="/signup" component={SignupPage} />
-          <Route path="/login" component={LoginPage} />
-          <Route path="/mentor/dashboard" component={MentorDashboard} />
-          <Route path="/mentee/dashboard" component={MenteeDashboard} />
-          <Route path="/mentors" component={MentorList} />
-          <Route path="/mentees" component={MenteeList} />
-        </Switch>
+        <Header />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/signup" element={<SignupPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/mentor/dashboard" element={<PrivateRoute element={<MentorDashboard />} />} />
+          <Route path="/mentee/dashboard" element={<PrivateRoute element={<MenteeDashboard />} />} />
+          <Route path="/mentors" element={<PrivateRoute element={<MentorList />} />} />
+          <Route path="/mentees" element={<PrivateRoute element={<MenteeList />} />} />
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
       </div>
     </Router>
   );
