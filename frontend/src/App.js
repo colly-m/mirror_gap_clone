@@ -27,10 +27,10 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/login" element={<LoginPage />} />
-          <Route path="/mentor/dashboard" element={<PrivateRoute element={<MentorDashboard />} />} />
-          <Route path="/mentee/dashboard" element={<PrivateRoute element={<MenteeDashboard />} />} />
-          <Route path="/mentors" element={<PrivateRoute element={<MentorList />} />} />
-          <Route path="/mentees" element={<PrivateRoute element={<MenteeList />} />} />
+          <Route path="/mentor/dashboard" element={<PrivateRoute component={<MentorDashboard />} />} />
+          <Route path="/mentee/dashboard" element={<PrivateRoute component={<MenteeDashboard />} />} />
+          <Route path="/mentors" element={<PrivateRoute component={<MentorList />} />} />
+          <Route path="/mentees" element={<PrivateRoute component={<MenteeList />} />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </div>
